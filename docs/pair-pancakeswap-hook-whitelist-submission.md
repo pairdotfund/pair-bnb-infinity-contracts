@@ -13,7 +13,7 @@ This submission is for the standard hook only. See the NFT addendum before prepa
 
 **What the hook does:**
 
-PAIR's constructor-deployed, non-proxy hook supports Infinity CL token-launch pools with optional Creator Fees, project-token burns, Fee Sharing and Holder Rewards, plus on-chain graduation tracking. It collects a fixed 30 bps protocol fee and optional project-mode fees separately from the static LP fee. Swap callbacks return zero custom deltas; settlement requires pre-attested PAIR adapters with pinned runtime and implementation hashes. The hook does not modify liquidity or initiate nested swaps in the current release. It retains privileged fee-policy and adapter-implementation approval controls and has upgradeable external dependencies; arbitrary third-party routers/quoters are not currently supported merely by whitelisting the hook.
+PAIR's constructor-deployed, non-proxy hook supports Infinity CL token-launch pools with optional Creator Fees, project-token burns, Fee Sharing and Holder Rewards, plus on-chain graduation tracking. It collects a fixed 30 bps protocol fee and optional project-mode fees separately from the static LP fee. Swap callbacks return zero custom deltas; settlement requires pre-attested PAIR adapters with pinned runtime and implementation hashes. The hook does not modify liquidity or initiate nested swaps in the current release. It retains protocol-admin fee-policy and adapter-implementation approval controls, not token-creator permission to amend hook fees after launch, and has upgradeable external dependencies; arbitrary third-party routers/quoters are not currently supported merely by whitelisting the hook.
 
 **Hook address:**
 
@@ -55,7 +55,11 @@ The inherited `PancakeV1InfinityHook.sol`, dependencies, compiler input and cons
 
 ### 3.4 Can an admin change LP fees or hook fees?
 
-**Yes — project-mode hook fee policies.** The hook owner or finalized registrar can append new policies affecting project-mode fee rates, permitted modes and validated destinations, subject to the encoded restrictions. Activation may be immediate; there is no enforced timelock. The hook does not change the PoolKey's static LP fee, and the 30 bps protocol-fee constant is not an admin-settable hook parameter.
+**Yes — post-launch changes to project-mode hook fee policies are a protocol-admin control, not a token-creator privilege.** Creators select an initial supported mode/rate when launching, but being a token creator or fee recipient does not grant permission to amend the hook policy afterward. The protocol-admin wallet that owns the hook can append policies affecting project-mode fee rates, permitted modes and validated destinations, subject to the encoded restrictions.
+
+At contract level, the finalized registrar is also authorized. In the current release, that registrar is the launch engine: it initializes policies for newly created tokens and exposes no creator-controlled post-launch policy-editing endpoint.
+
+This administrative authority may be used for approved community takeovers (CTO), but the contract does not enforce CTO-only use. Activation may be immediate; there is no enforced timelock. The hook does not change the PoolKey's static LP fee, and the 30 bps protocol-fee constant is not an admin-settable hook parameter.
 
 ### 3.5 Does the hook require nonempty hookData?
 
@@ -81,7 +85,7 @@ The inherited `PancakeV1InfinityHook.sol`, dependencies, compiler input and cons
 
 Owner: `0x7F269a0e5dC86Cd7101D94F86602E947528D05dB`.
 
-The owner/finalized registrar retain the fee-policy controls described above. The owner can re-attest the implementation of already-enrolled adapters and transfer/renounce ownership. Initial adapter enrollment and registrar/factory bindings are finalized. Launchpad, engines, adapters and vault/collection dependencies include upgradeable contracts under their respective authorities; adapter implementation changes fail hook authorization until re-attested. The standard fee-policy controls have no enforced timelock. These privileges do not permit upgrading the immutable hook's code.
+The protocol-admin hook owner retains the post-launch fee-policy controls described above; token-creator or fee-recipient status alone grants no such authority. The finalized registrar is also authorized at hook level, with its current launch-engine implementation using that authority for initial policy registration, not creator-controlled amendments to existing tokens. The owner can re-attest the implementation of already-enrolled adapters and transfer/renounce ownership. Initial adapter enrollment and registrar/factory bindings are finalized. Launchpad, engines, adapters and vault/collection dependencies include upgradeable contracts under their respective authorities; adapter implementation changes fail hook authorization until re-attested. The standard fee-policy controls have no enforced timelock and are not contractually limited to CTO cases. These privileges do not permit upgrading the immutable hook's code.
 
 ## Audit and acceptance status
 

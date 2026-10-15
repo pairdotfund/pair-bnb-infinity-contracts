@@ -58,7 +58,11 @@ release. Source/artifact/compiler-input files are unchanged by this documentatio
 - Only pre-attested PAIR adapters are accepted. Their proxy runtime and current
   implementation code hashes must match. This is **not** standard-router or
   terminal compatibility.
-- Owner policy controls and adapter implementation re-attestation remain.
+- Post-launch fee-policy changes are a protocol-admin control, not a token-creator
+  privilege. The registrar initializes new-launch policies; the current engine
+  exposes no creator-controlled post-launch policy-editing endpoint. Administrative
+  amendments may support approved CTOs, but the contract does not enforce CTO-only
+  use or a timelock. Adapter implementation re-attestation remains an owner control.
 - Engines, adapters, vaults and NFT collections include upgradeable dependencies.
 - Old pools retain their original hooks, adapters and vaults.
 - Immutability alone does not guarantee PancakeSwap acceptance.
