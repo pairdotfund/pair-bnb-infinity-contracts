@@ -1,0 +1,12 @@
+{
+  "name": "pair-bnb-infinity-immutable-hook-source",
+  "version": "0.0.0-candidate",
+  "private": true,
+  "description": "Reproducible PAIR BNB Infinity immutable-hook candidate, not a deployed release",
+  "scripts": {
+    "compile": "node scripts/compile.cjs"
+  },
+  "devDependencies": {
+    "solc": "0.8.26"
+  }
+}

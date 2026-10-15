@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "date": "2026-10-15",
+  "manifestSha256": "10454984bf66930a74369ca0e6b895c6b04d4cbd0b8e3ad7c293bb77c49df4b2",
+  "solcLongVersion": "0.8.26+commit.8a97fa7a",
+  "contractsChecked": 18,
+  "originalCompilerInputs": 5,
+  "comparison": "Exact creation bytecode and deployed-runtime template equality for every contract listed in the source bundle manifest",
+  "outputSelection": "Only the published contracts; original input files, all sources and bytecode-affecting settings retained",
+  "liveTransactionsSent": false,
+  "limitations": [
+    "Not proof that a mainnet address matches a candidate",
+    "Constructor arguments and deployed immutable values require separate receipt-bound verification",
+    "Not an independent security audit, whitelist approval or deployment approval"
+  ]
+}

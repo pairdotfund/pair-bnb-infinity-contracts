@@ -1,0 +1,10 @@
+{
+  "chainId": 56,
+  "forkBlock": "127756690",
+  "forkBlockHash": "0x07c40460c34f591108f267d5f54e20b25f28bea2b3260750fc22bee1ac9ce6c9",
+  "passed": true,
+  "liveTransactionsSent": false,
+  "scope": "Local-fixture old-to-new launchpad upgrade, immutable hooks, existing pool preservation and modes 0-5",
+  "limitation": "Not an exact production nonce-bound deployment rehearsal or live activation approval",
+  "log": "generated-artifacts/bnb-immutable-hooks/rehearsal.log"
+}
