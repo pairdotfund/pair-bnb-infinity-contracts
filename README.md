@@ -11,9 +11,10 @@
 - Activation transaction: [`0xa48f32a5325e3280492325609db765fa4beb31c52c5b996b237d4d6539b2a05b`](https://bscscan.com/tx/0xa48f32a5325e3280492325609db765fa4beb31c52c5b996b237d4d6539b2a05b)
 
 The cutover applies to **future launches only**. Existing pools keep their old
-hooks, adapters and fee vaults. No mainnet test tokens or trades were created by
-this deployment. A new mainnet launch is required before submitting Pool IDs for
-these hook addresses; old or fork-only Pool IDs must not be submitted.
+hooks, adapters and fee vaults. The deployment itself created no test tokens or
+trades. A subsequent user launch has now supplied three verified standard-hook
+Pool IDs, listed below. The NFT hook still needs its first real pool; old or
+fork-only Pool IDs must not be submitted.
 
 `deployments/bnb-mainnet.json` records the address graph and 35 checked receipts.
 `deployments/constructor-evidence.json` provides exact deployed creation input,
@@ -26,6 +27,28 @@ their dependencies, a future-launch-only launchpad cutover implementation, exact
 Solidity standard-JSON compiler inputs, ABIs, storage layouts and bytecode templates.
 The two new hooks have no proxy, initializer, delegatecall upgrade path or UUPS
 entrypoint. The other platform contracts remain upgradeable.
+
+## PancakeSwap review and live standard-hook pools
+
+- [Updated audit / compatibility review request](docs/pair-pancakeswap-hook-review-request.md)
+- [Copy-ready hook-whitelist form answers](docs/pair-pancakeswap-hook-whitelist-submission.md)
+
+Successful standard-hook launch: [imtest](https://bscscan.com/tx/0x26023fbe5058399c00995c94f3e61858311e101a703da04f372cf1eb6349dc1e), block 127801793.
+The CLPoolManager PoolKeys identify the immutable standard hook and static 1% LP fees:
+
+| Quote | Pool ID |
+| --- | --- |
+| CAKE | `0x18084a4bbffc86b21bc9ed64091b58c16b9e0935b3864739041692c74a2b37f4` |
+| USDC | `0xf6ad742dd74704aabb8cfc913ba24708f1f40d35a935ede3182ef43882665d3b` |
+| U | `0x4d048bd5a4c9df6eb334d41ca1ee832b0f8ec9aab7f8caf742c3b81b7867c809` |
+
+No registration events were found for the immutable NFT hook from deployment block
+127768836 through 127803826. Do not reuse standard-hook IDs for the NFT submission.
+
+The root `manifest.json` is the original **source-build snapshot** and retains its
+pre-deployment status for provenance. Activated identities and receipts are in
+`deployments/bnb-mainnet.json`; the review documents above describe the current
+release. Source/artifact/compiler-input files are unchanged by this documentation update.
 
 ## Preserved behavior and limitations
 
