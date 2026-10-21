@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "chainId": 56,
+  "checkedAtBlock": "128886026",
+  "implementation": "0x64668B2924B06F0c4F53028316eB89Dec7a17091",
+  "immutableHookCodeUnchanged": true,
+  "unauthorizedCallsRejected": 8,
+  "checks": [
+    {
+      "address": "0x538b5a6c0a3F0c28B8B17A2c758daE9A3d669B4C",
+      "function": "executeExactInput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    },
+    {
+      "address": "0x538b5a6c0a3F0c28B8B17A2c758daE9A3d669B4C",
+      "function": "executeExactOutput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    },
+    {
+      "address": "0x54699a220C0c7E05b6319E2339dA457A6d1A3d5C",
+      "function": "executeExactInput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    },
+    {
+      "address": "0x54699a220C0c7E05b6319E2339dA457A6d1A3d5C",
+      "function": "executeExactOutput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    },
+    {
+      "address": "0x6E1d0f2f669C7D80D123e1e7D06CCB1628AB54a6",
+      "function": "executeExactInput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    },
+    {
+      "address": "0x6E1d0f2f669C7D80D123e1e7D06CCB1628AB54a6",
+      "function": "executeExactOutput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    },
+    {
+      "address": "0x17b7B67a14A4877C5bF13F501a494bA6A8f374F6",
+      "function": "executeExactInput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    },
+    {
+      "address": "0x17b7B67a14A4877C5bF13F501a494bA6A8f374F6",
+      "function": "executeExactOutput",
+      "expectedError": "UnauthorizedPayer",
+      "readOnlySimulation": true
+    }
+  ],
+  "transactionsSent": false
+}

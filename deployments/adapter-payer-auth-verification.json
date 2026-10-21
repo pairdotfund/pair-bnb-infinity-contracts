@@ -1,0 +1,11 @@
+{
+  "address": "0x64668B2924B06F0c4F53028316eB89Dec7a17091",
+  "verified": true,
+  "kind": "EXACT_SOURCE_READBACK",
+  "contract": "BnbInfinitySwapAdapterUpgradeable",
+  "compiler": "v0.8.26+commit.8a97fa7a",
+  "license": "MIT",
+  "inputSha256": "f3fb54b003b3d06a3b07bc18a5faf0357b5818c46c4d37c3a373ba4d392d07fd",
+  "allPublishedSourcesMatch": true,
+  "explorer": "https://bscscan.com/address/0x64668B2924B06F0c4F53028316eB89Dec7a17091#code"
+}

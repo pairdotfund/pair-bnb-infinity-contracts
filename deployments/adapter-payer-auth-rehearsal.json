@@ -1,0 +1,68 @@
+{
+  "status": "FORK_REHEARSED",
+  "bytecodeHash": "0xa64301e6c1de023961788f03cf9211a3d489828c58ed95e09c12f268e5f3b159",
+  "anchor": {
+    "number": "128883351",
+    "hash": "0xf29fedd7dbe5dbce3aeb078b1cf952ea40fd03341b58e708f573ac65c4f5feed"
+  },
+  "implementation": "0x64668B2924B06F0c4F53028316eB89Dec7a17091",
+  "checks": [
+    "old standard exact-input exploit reproduced",
+    "old standard exact-output exploit reproduced",
+    "old nft exact-input exploit reproduced",
+    "old nft exact-output exploit reproduced",
+    "all four proxy states preserved",
+    "both immutable hooks fail closed before implementation re-attestation",
+    "all four implementation attestations updated; unauthorized attestation rejected",
+    "eight unauthorized-payer calls rejected with balances and allowances unchanged",
+    "mode 0 legitimate buy/sell and settlement preserved",
+    "mode 1 legitimate buy/sell and settlement preserved",
+    "mode 2 legitimate buy/sell and settlement preserved",
+    "mode 3 legitimate buy/sell and settlement preserved",
+    "mode 4 legitimate buy/sell and settlement preserved",
+    "mode 5 legitimate buy/sell and settlement preserved",
+    "authorized payer can deliberately choose another recipient",
+    "standard native developer buy preserved",
+    "NFT native developer buy preserved",
+    "retained legacy-pool native buy/sell preserved"
+  ],
+  "receipts": [
+    {
+      "label": "deploy",
+      "gasUsed": "1747640"
+    },
+    {
+      "label": "upgrade:0x538b5a6c0a3F0c28B8B17A2c758daE9A3d669B4C",
+      "gasUsed": "37205"
+    },
+    {
+      "label": "upgrade:0x54699a220C0c7E05b6319E2339dA457A6d1A3d5C",
+      "gasUsed": "37205"
+    },
+    {
+      "label": "upgrade:0x6E1d0f2f669C7D80D123e1e7D06CCB1628AB54a6",
+      "gasUsed": "37205"
+    },
+    {
+      "label": "upgrade:0x17b7B67a14A4877C5bF13F501a494bA6A8f374F6",
+      "gasUsed": "37205"
+    },
+    {
+      "label": "attest:0x538b5a6c0a3F0c28B8B17A2c758daE9A3d669B4C",
+      "gasUsed": "53869"
+    },
+    {
+      "label": "attest:0x54699a220C0c7E05b6319E2339dA457A6d1A3d5C",
+      "gasUsed": "57087"
+    },
+    {
+      "label": "attest:0x6E1d0f2f669C7D80D123e1e7D06CCB1628AB54a6",
+      "gasUsed": "60885"
+    },
+    {
+      "label": "attest:0x17b7B67a14A4877C5bF13F501a494bA6A8f374F6",
+      "gasUsed": "62004"
+    }
+  ],
+  "localOnly": true
+}

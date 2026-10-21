@@ -29,12 +29,14 @@ Both are constructor-deployed, **non-proxy immutable hook contracts** with no ho
 
 ## Supporting contracts in audit scope
 
+**H-01 repair:** all four current/historical adapter proxies now use the corrected payer-authorized implementation and have been re-attested. See [remediation and second-review request](pair-pancakeswap-adapter-security-remediation.md). Hook bytecode is unchanged.
+
 | Component | Current address | Current implementation, where upgradeable |
 | --- | --- | --- |
 | Shared launchpad | `0xb7281262252a054e6B3c886F4c6B2353f9E7F742` | `0xbe9135eC8f41E0d26154d26b921351b4F7C27647` |
 | Standard engine | `0xC7839B4513a23F577c6A5Dbe0A87c56635D70e63` | `0x3E1D32f3214E13b4077b9D8b659eD4494ab880F6` |
-| Standard swap adapter | `0x538b5a6c0a3F0c28B8B17A2c758daE9A3d669B4C` | `0x8d5D8Ba002641c44EC4a659b25b3D6D02AD8F165` |
-| NFT swap adapter | `0x54699a220C0c7E05b6319E2339dA457A6d1A3d5C` | `0x8d5D8Ba002641c44EC4a659b25b3D6D02AD8F165` |
+| Standard swap adapter | `0x538b5a6c0a3F0c28B8B17A2c758daE9A3d669B4C` | `0x64668B2924B06F0c4F53028316eB89Dec7a17091` |
+| NFT swap adapter | `0x54699a220C0c7E05b6319E2339dA457A6d1A3d5C` | `0x64668B2924B06F0c4F53028316eB89Dec7a17091` |
 | NFT launch module | `0x19B339577b265DA19125b72C6e4C8111d9fd9d71` | `0x04438EFb4979695995E778aA738D5B69dA45a812` |
 | Standard factory | `0x98b6315c2c2645A8B43D7fF1224A0D8C89c6e278` | `0xf1246F707026652b9778A22Fb4A2DD9e2535c20A` |
 | NFT factory | `0xAc4B750B54649706F8AD75120F0B74e2f5E6779F` | `0xd9Aa0be7f1A663E1d5B149225c8Afb767bEddf2b` |

@@ -2,6 +2,26 @@
 
 **Deployed on BNB Chain mainnet. Not independently audited. Not approved or whitelisted by PancakeSwap.**
 
+## H-01 security repair — current adapter implementation
+
+All four current/historical adapter proxies now use corrected implementation
+[`0x64668B2924B06F0c4F53028316eB89Dec7a17091`](https://bscscan.com/address/0x64668B2924B06F0c4F53028316eB89Dec7a17091#code).
+Both swap entrypoints require the caller to be the payer before spending tokens.
+The four associated hooks have re-attested the new implementation. No hook or pool was redeployed.
+
+- [Remediation summary and second-audit request](docs/pair-pancakeswap-adapter-security-remediation.md)
+- [Current upgrade/attestation receipts](deployments/adapter-payer-auth.json)
+- [BscScan exact-source verification](deployments/adapter-payer-auth-verification.json)
+- [Fork regression evidence](deployments/adapter-payer-auth-rehearsal.json) and [live read-only postflight](deployments/adapter-payer-auth-postflight.json)
+- Corrected artifact: `artifacts/BnbInfinitySwapAdapterPayerAuth.json`; full compiler output: `compiler-outputs/BnbInfinitySwapAdapterPayerAuth.json`.
+- Exact compiler input and complete source namespace: `compiler-inputs/f3fb54b003b3d06a3b07bc18a5faf0357b5818c46c4d37c3a373ba4d392d07fd.json` and `sources/f3fb54b003b3d06a3b07bc18a5faf0357b5818c46c4d37c3a373ba4d392d07fd/`.
+
+**Historical provenance:** `deployments/bnb-mainnet.json` and the original adapter artifact
+record the earlier deployment; use `deployments/adapter-payer-auth.json` for the later
+adapter upgrades. Do not deploy the old adapter artifact as the repaired implementation.
+The immutable hook source files themselves are unchanged. No independent audit sign-off
+or terminal-compatibility approval is claimed by this repair.
+
 ## Mainnet deployment
 
 - Standard hook: [`0xD8458aF604EBE341d69a871e98348E77F879c297`](https://bscscan.com/address/0xD8458aF604EBE341d69a871e98348E77F879c297#code)

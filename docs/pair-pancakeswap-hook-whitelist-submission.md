@@ -3,6 +3,8 @@
 Prepared 2026-10-15. **Ready to copy into the form; not submitted automatically.**
 This submission is for the standard hook only. See the NFT addendum before preparing a separate NFT-hook submission.
 
+**Material dependency change for review:** H-01 was repaired by upgrading all four current/historical adapter proxies to payer-authorized implementation `0x64668B2924B06F0c4F53028316eB89Dec7a17091` and re-attesting them with their hooks. Hook code and the addresses below are unchanged. See [remediation and second-review evidence](pair-pancakeswap-adapter-security-remediation.md); the earlier pinned hook-source revision does not include this later adapter repair.
+
 ## 2. Hook overview
 
 **AMM type:** PancakeSwap Infinity CL.
