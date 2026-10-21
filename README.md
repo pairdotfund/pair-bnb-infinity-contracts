@@ -9,6 +9,7 @@ All four current/historical adapter proxies now use corrected implementation
 Both swap entrypoints require the caller to be the payer before spending tokens.
 The four associated hooks have re-attested the new implementation. No hook or pool was redeployed.
 
+- [Quick contract inventory and direct source links for re-audit](docs/pair-pancakeswap-reaudit-contracts.md)
 - [Remediation summary and second-audit request](docs/pair-pancakeswap-adapter-security-remediation.md)
 - [Current upgrade/attestation receipts](deployments/adapter-payer-auth.json)
 - [BscScan exact-source verification](deployments/adapter-payer-auth-verification.json)
