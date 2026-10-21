@@ -1,9 +1,10 @@
-# PancakeSwap hook submission — PAIR immutable standard hook
+# PancakeSwap hook review resubmission — PAIR Infinity Launch Hook
 
-Prepared 2026-10-15. **Ready to copy into the form; not submitted automatically.**
-This submission is for the standard hook only. See the NFT addendum before preparing a separate NFT-hook submission.
+Updated 2026-10-21. **Copy-ready answers for sections 2–4; not submitted automatically.**
 
-**Material dependency change for review:** H-01 was repaired by upgrading all four current/historical adapter proxies to payer-authorized implementation `0x64668B2924B06F0c4F53028316eB89Dec7a17091` and re-attesting them with their hooks. Hook code and the addresses below are unchanged. See [remediation and second-review evidence](pair-pancakeswap-adapter-security-remediation.md); the earlier pinned hook-source revision does not include this later adapter repair.
+**Scope:** one submission for the standard immutable hook, `0xD8458aF604EBE341d69a871e98348E77F879c297`. Do not combine the NFT hook or its behavior with this form.
+
+The hook bytecode is unchanged. This resubmission discloses the deployed H-01 repair to its upgradeable adapter dependency. On-chain checks at block **128915394** confirmed the hook owner, finalized registrar/adapters, registration bitmap, corrected adapter implementation attestation, and all three Pool IDs listed below.
 
 ## 2. Hook overview
 
@@ -15,7 +16,11 @@ This submission is for the standard hook only. See the NFT addendum before prepa
 
 **What the hook does:**
 
-PAIR's constructor-deployed, non-proxy hook supports Infinity CL token-launch pools with optional Creator Fees, project-token burns, Fee Sharing and Holder Rewards, plus on-chain graduation tracking. It collects a fixed 30 bps protocol fee and optional project-mode fees separately from the static LP fee. Swap callbacks return zero custom deltas; settlement requires pre-attested PAIR adapters with pinned runtime and implementation hashes. The hook does not modify liquidity or initiate nested swaps in the current release. It retains protocol-admin fee-policy and adapter-implementation approval controls, not token-creator permission to amend hook fees after launch, and has upgradeable external dependencies; arbitrary third-party routers/quoters are not currently supported merely by whitelisting the hook.
+PAIR's non-proxy, immutable hook supports token-launch pools on PancakeSwap Infinity CL. It implements optional Creator Fees, project-token burns, Fee Sharing and Holder Rewards, plus permanent on-chain graduation tracking. Fees consist of a fixed 30 bps protocol fee and optional project-mode fees, separate from the pool's static LP fee.
+
+Swap callbacks return zero custom swap deltas. Fees are settled through pre-enrolled PAIR adapters authenticated by both proxy-runtime and implementation hashes. The current hook does not initiate nested swaps or change liquidity. Post-launch project-fee policy changes are controlled by the protocol admin, not token creators merely by virtue of being creators.
+
+The hook itself is immutable, but supporting adapters and other platform dependencies include upgradeable contracts. The deployed adapter repair requires the caller to be the payer before spending tokens. Hook whitelisting alone does not authorize arbitrary third-party routers or establish GMGN/Axiom compatibility.
 
 **Hook address:**
 
@@ -39,13 +44,41 @@ https://bscscan.com/address/0xD8458aF604EBE341d69a871e98348E77F879c297#code
 
 https://github.com/pairdotfund/pair-bnb-infinity-contracts/blob/5945857388e30a16a3c436cee1733381e8e3800b/sources/9001b9323197463d219982f9f001379f7ec278ebe77ee5064f2d9fed5c597ca5/contracts/pancake-v1/bnb/immutable/BnbInfinityImmutableHook.sol
 
-The inherited `PancakeV1InfinityHook.sol`, dependencies, compiler input and constructor evidence are included in the same public repository. BscScan source readback matches the public compiler-input sources.
+The inherited `PancakeV1InfinityHook.sol`, dependencies, compiler input and constructor evidence are included in the same public repository. BscScan source readback matches the public compiler-input sources. This pinned hook-source revision remains correct because the hook was not redeployed or modified by the adapter repair.
+
+### Material dependency change since the previous review — H-01
+
+The reported arbitrary-payer allowance-spending finding was corrected in `BnbInfinitySwapAdapterUpgradeable`. Both `executeExactInput` and `executeExactOutput` now reach `if (payer != msg.sender) revert UnauthorizedPayer();` at the start of their shared execution path, before token transfers.
+
+- **Corrected implementation:** `0x64668B2924B06F0c4F53028316eB89Dec7a17091`.
+- **Adapter proxy used by this standard hook:** `0x538b5a6c0a3F0c28B8B17A2c758daE9A3d669B4C`.
+- [Verified adapter implementation source on BscScan](https://bscscan.com/address/0x64668B2924B06F0c4F53028316eB89Dec7a17091#code).
+- [Corrected adapter source on GitHub — pinned release](https://github.com/pairdotfund/pair-bnb-infinity-contracts/blob/4808672a27d341082c2048271e7e3aa300930afe/sources/f3fb54b003b3d06a3b07bc18a5faf0357b5818c46c4d37c3a373ba4d392d07fd/contracts/pancake-v1/bnb/upgradeable/BnbInfinitySwapAdapterUpgradeable.sol).
+- [Deployment, four proxy upgrades and four hook re-attestations](https://github.com/pairdotfund/pair-bnb-infinity-contracts/blob/4808672a27d341082c2048271e7e3aa300930afe/deployments/adapter-payer-auth.json).
+- [Fork regression evidence](https://github.com/pairdotfund/pair-bnb-infinity-contracts/blob/4808672a27d341082c2048271e7e3aa300930afe/deployments/adapter-payer-auth-rehearsal.json) and [live read-only rejection checks](https://github.com/pairdotfund/pair-bnb-infinity-contracts/blob/4808672a27d341082c2048271e7e3aa300930afe/deployments/adapter-payer-auth-postflight.json).
+
+All four current/historical adapter proxies were repaired and re-attested, not only the standard adapter above. The hook's approved implementation hash is now `0x98c6e47049a34d4cb259359a8ae46236bf7eca300b20797e5f777168078c2b05`. No hook, pool or token was redeployed. The repair did not change hook callback behavior, storage layouts, existing function signatures, fee formulas or settlement design.
+
+Contract-funded executors must hold the input tokens and pass themselves as payer; an authorized payer may still select a different output recipient. This is not a signed third-party-payer authorization feature.
 
 ## 3. Behavior declarations
 
+| Question | Selection |
+| --- | --- |
+| 3.1 Return custom deltas | **No — all custom swap delta values are zero; see permission-bit disclosure below** |
+| 3.2 Dynamic LP fees | **No** |
+| 3.3 Additional hook fees | **Yes** |
+| 3.4 Admin can change LP fees or hook fees | **Yes — project-mode hook policies, not the static LP fee** |
+| 3.5 Nonempty hookData required | **No** |
+| 3.6 Callback-triggered nested swaps | **No in the current reviewed implementation; external dependencies disclosed below** |
+| 3.7 Callback liquidity changes | **No** |
+| 3.8 Other state changes affecting swaps or quotes | **Yes** |
+
+Paste the explanations below with the corresponding answers; do not omit the adapter restrictions or privileged controls.
+
 ### 3.1 Does the hook return deltas from callbacks?
 
-**No — no nonzero custom deltas.** `beforeSwap` returns `BeforeSwapDelta(0,0)` and `afterSwap` returns zero. Return-delta permission bits are registered in bitmap 3264/0x0cc0, but the callback return values are zero. Hook fees are settled separately through the authenticated adapter, not returned as hook deltas.
+**No — no nonzero custom swap deltas.** `beforeSwap` returns `BeforeSwapDelta(0,0)` and `afterSwap` returns zero. For completeness, both return-delta permission bits are enabled in the registered bitmap **3264 / 0x0cc0**, despite the actual returned delta values being zero. Fees are settled separately through the authenticated adapter, not charged through returned custom deltas. This answer describes the returned values, not an absence of return-delta permission bits.
 
 ### 3.2 Does the hook use dynamic LP fees?
 
@@ -57,7 +90,7 @@ The inherited `PancakeV1InfinityHook.sol`, dependencies, compiler input and cons
 
 ### 3.4 Can an admin change LP fees or hook fees?
 
-**Yes — post-launch changes to project-mode hook fee policies are a protocol-admin control, not a token-creator privilege.** Creators select an initial supported mode/rate when launching, but being a token creator or fee recipient does not grant permission to amend the hook policy afterward. The protocol-admin wallet that owns the hook can append policies affecting project-mode fee rates, permitted modes and validated destinations, subject to the encoded restrictions.
+**Yes — project-mode hook fee-policy changes are an admin-only product control, not a token-creator privilege.** Creators select an initial supported mode/rate when launching. Being a token creator or fee recipient does not authorize post-launch amendments. The protocol-admin hook owner can append policy epochs changing supported project-mode rates, permitted modes and validated destinations, subject to contract restrictions, including holder-mode transition restrictions and vault attestation.
 
 At contract level, the finalized registrar is also authorized. In the current release, that registrar is the launch engine: it initializes policies for newly created tokens and exposes no creator-controlled post-launch policy-editing endpoint.
 
@@ -77,34 +110,28 @@ This administrative authority may be used for approved community takeovers (CTO)
 
 ### 3.8 Does a callback make other state changes that affect the current swap or later quotes?
 
-**Yes.** `afterSwap` can record graduation, collect protocol/project fees, write pending fee-settlement state and invoke fee/reward-vault accounting. Burn mode transfers applicable project-token fees to the burn address. Separate settlement clears pending fees. Policy state and these fees affect execution eligibility and net user amounts even though custom callback deltas are zero.
+**Yes.** `afterSwap` can permanently record graduation, invoke protocol/project fee settlement and vault accounting, and write pending output-fee settlement state. Burn-mode settlement transfers applicable project-token fees to the burn address. The adapter subsequently calls `settleUnspecifiedFee()` to consume pending output fees after the callback returns. These operations change balances, accounting and net user amounts. The active admin/registrar-set policy also affects quotes and execution even though the returned custom swap deltas are zero.
 
 ## 4. Upgradeability and privileged control
 
-**Is the hook upgradeable? No.** It is constructor-deployed and non-proxy, with no hook-code upgrade entrypoint or UUPS/delegatecall upgrade path. Immutability applies to this hook, not the entire surrounding platform.
+### Is the hook upgradeable?
 
-**Does the hook have privileged controls? Yes.**
+**No.** `BnbInfinityImmutableHook` is constructor-deployed and non-proxy, with no hook-code upgrade entrypoint or UUPS/delegatecall upgrade path. The H-01 repair upgraded an external adapter implementation, not this hook. Immutability applies to hook code, not to the entire surrounding platform or its mutable policy state.
+
+### Does the hook have any privileged controls?
+
+**Yes.**
 
 Owner: `0x7F269a0e5dC86Cd7101D94F86602E947528D05dB`.
 
 The protocol-admin hook owner retains the post-launch fee-policy controls described above; token-creator or fee-recipient status alone grants no such authority. The finalized registrar is also authorized at hook level, with its current launch-engine implementation using that authority for initial policy registration, not creator-controlled amendments to existing tokens. The owner can re-attest the implementation of already-enrolled adapters and transfer/renounce ownership. Initial adapter enrollment and registrar/factory bindings are finalized. Launchpad, engines, adapters and vault/collection dependencies include upgradeable contracts under their respective authorities; adapter implementation changes fail hook authorization until re-attested. The standard fee-policy controls have no enforced timelock and are not contractually limited to CTO cases. These privileges do not permit upgrading the immutable hook's code.
 
-## Audit and acceptance status
+## Review evidence and acceptance status
 
-No completed independent audit report is being claimed. Public source verification is not a security audit. This request seeks PancakeSwap's review/referral and listing guidance; neither PancakeSwap acceptance nor GMGN/Axiom compatibility is guaranteed.
+The published fork regression contains 13 passing tests / 18 recorded checks, including exploit reproduction before the repair, rejection afterward, fee modes, native developer buys and retained-pool trading. The published mainnet postflight contains eight read-only unauthorized-payer rejection checks across four adapters.
 
-## Separate NFT-hook submission — not ready for the Pool ID field
+No completed independent audit report or closure of every finding is being claimed. Public source verification is not a security audit. This submission requests review of the H-01 repair and current hook/dependency behavior, as well as hook-listing guidance. It does not claim PancakeSwap acceptance or GMGN/Axiom compatibility.
 
-Do not put two hook addresses into the standard-hook form. The immutable NFT hook requires its own submission.
+## Separate NFT-hook scope
 
-- AMM/chain: Infinity CL; BNB Chain only.
-- Name: **PAIR Infinity NFT Rewards Hook (Immutable)**.
-- Hook: `0x56c0E6C4b569F62c5bf2539A386dec4db2b256Cd`.
-- Verified: **Yes**.
-- Explorer: https://bscscan.com/address/0x56c0E6C4b569F62c5bf2539A386dec4db2b256Cd#code
-- Source: https://github.com/pairdotfund/pair-bnb-infinity-contracts/blob/5945857388e30a16a3c436cee1733381e8e3800b/sources/9001b9323197463d219982f9f001379f7ec278ebe77ee5064f2d9fed5c597ca5/contracts/pancake-v1/bnb/immutable/BnbInfinityImmutableNftHook.sol
-- Overview: non-proxy immutable NFT-rewards hook with 30 bps protocol fees, NFT-mode quote fees that depend on rewards activation, approved-adapter settlement, and permanent on-chain graduation tracking.
-- **Pool IDs: none found** in this hook's registration history from block 127768836 through 127803826. Do not submit standard-hook Pool IDs here. Launch and authenticate a real NFT-mode pool first; do not spend funds or create a test pool without separate approval.
-- 3.1 **No** nonzero callback deltas; 3.2 **No** dynamic LP fees; 3.3 **Yes** additional protocol/NFT-mode fees; 3.5 **No** required nonempty hookData; 3.6 **No** nested swaps in current callback/settlement code, with the same dependency caveat; 3.7 **No** callback liquidity changes; 3.8 **Yes** graduation, fee-settlement state and NFT-reward accounting.
-- **3.4 differs:** the hook exposes no admin setter for an existing pool's LP fee or already-registered NFT fee rate. Its finalized registrar initializes each NFT fee policy once. The effective NFT fee can nevertheless turn on/off through the external collection's `rewardsActive()` state, and that collection is an upgradeable dependency. Disclose this distinction and obtain PancakeSwap's interpretation before finalizing the Yes/No selection for the NFT submission.
-- Hook upgradeable: **No**. Privileged controls: **Yes** — ownership, re-attestation of existing adapter implementations, registrar/factory authority and upgradeable dependencies remain. Standard-mode owner-editable fee-policy behavior must not be attributed to this NFT hook.
+The immutable NFT hook at `0x56c0E6C4b569F62c5bf2539A386dec4db2b256Cd` needs its own form, authenticated NFT-hook Pool IDs and NFT-specific fee-control explanations. Do not reuse the standard-hook Pool IDs or its post-launch fee-policy answer. This document does not assert that there are currently no NFT pools; earlier historical scans are not a current absence-of-pools proof.
