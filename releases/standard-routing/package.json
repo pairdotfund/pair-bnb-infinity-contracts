@@ -1,0 +1,11 @@
+{
+  "name": "pair-bnb-infinity-standard-routing-source",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "node scripts/compile.cjs"
+  },
+  "devDependencies": {
+    "solc": "0.8.26"
+  }
+}

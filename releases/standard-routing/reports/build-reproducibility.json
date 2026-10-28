@@ -1,0 +1,135 @@
+{
+  "status": "EXACT_MATCH",
+  "compiler": "0.8.26",
+  "contracts": 21,
+  "compilerInputs": [
+    {
+      "file": "compiler-inputs/71a8fe635711c69e69a7bb1aaf573bb185b7a22e4e55ad021c237959bce23524.json",
+      "sha256": "71a8fe635711c69e69a7bb1aaf573bb185b7a22e4e55ad021c237959bce23524",
+      "solcLongVersion": "0.8.26+commit.8a97fa7a"
+    },
+    {
+      "file": "compiler-inputs/88df2865f96c60d07c6194da1d9cdb79c98628d724179e4c0d965d5cef654eb8.json",
+      "sha256": "88df2865f96c60d07c6194da1d9cdb79c98628d724179e4c0d965d5cef654eb8",
+      "solcLongVersion": "0.8.26+commit.8a97fa7a"
+    },
+    {
+      "file": "compiler-inputs/762630418db8d521af44789c906ffc892fd4a866c828ef631c72f65e9c6124b6.json",
+      "sha256": "762630418db8d521af44789c906ffc892fd4a866c828ef631c72f65e9c6124b6",
+      "solcLongVersion": "0.8.26+commit.8a97fa7a"
+    },
+    {
+      "file": "compiler-inputs/c464fc5e9fa26c6673d471f217f7bf396cade9e58fff8bd6808775cfdd99d822.json",
+      "sha256": "c464fc5e9fa26c6673d471f217f7bf396cade9e58fff8bd6808775cfdd99d822",
+      "solcLongVersion": "0.8.26+commit.8a97fa7a"
+    }
+  ],
+  "manifestSha256": "5d591d6da5989edb7ed4dffab23feb9c92516b7e3a3a82de9a3ad1ef9eb54d27",
+  "matched": [
+    {
+      "name": "ERC1967Proxy",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityPoolBootstrapperUpgradeable",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreationDeployersUpgradeable",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreditVaultDeployer",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreditLaunchFactory",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityStandardNativeBuy",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityStandardRouterTransport",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityStandardDirectBuy",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityLaunchEngineUpgradeable",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbNFTCollectionProxyDeployerUpgradeable",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbNFTProxyFactoryUpgradeable",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityStandardNftDirectBuy",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityNftLaunchModuleUpgradeable",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreditProtocolVault",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreditNftCollection",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityStandardHook",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityStandardNftHook",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityStandardHookCutover",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreditCreatorVault",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreditSharingVault",
+      "creation": true,
+      "runtimeTemplate": true
+    },
+    {
+      "name": "BnbInfinityCreditHolderVault",
+      "creation": true,
+      "runtimeTemplate": true
+    }
+  ]
+}

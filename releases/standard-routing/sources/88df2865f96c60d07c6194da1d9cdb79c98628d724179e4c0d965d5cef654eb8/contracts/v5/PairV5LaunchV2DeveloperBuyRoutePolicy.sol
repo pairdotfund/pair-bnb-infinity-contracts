@@ -1,0 +1,84 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.26;
+
+/// @notice Generated from reports/robinhood-mainnet-route-policy.json.
+/// @dev kind 1 is direct WETH->quote; kind 2 is WETH->USDG->quote.
+library PairV5LaunchV2DeveloperBuyRoutePolicy {
+    uint8 internal constant DIRECT = 1;
+    uint8 internal constant VIA_USDG = 2;
+
+    function route(address token) internal pure returns (uint8 kind,uint24 wethFee,uint24 quoteFee) {
+        if(token==0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9)return(DIRECT,500,0); // AAPL
+        if(token==0x05a3d1Cd21d0C88145E82600E62e7E496e0F222B)return(VIA_USDG,100,3_000); // AMC
+        if(token==0x86923f96303D656E4aa86D9d42D1e57ad2023fdC)return(VIA_USDG,100,3_000); // AMD
+        if(token==0x12f190a9F9d7D37a250758b26824B97CE941bF54)return(VIA_USDG,100,3_000); // AMZN
+        if(token==0x47F93d52cBeC7C6D2CfC080e154002370a60dAEA)return(VIA_USDG,100,3_000); // ASML
+        if(token==0x4D21483a44Bf67a86b77E3dA301411880797D452)return(VIA_USDG,100,3_000); // BA
+        if(token==0xad25Ac6C84D497db898fa1E8387bf6Af3532a1c4)return(VIA_USDG,100,3_000); // BABA
+        if(token==0x48E39E56aCdbA37b09020C0b734A613C9a2f100A)return(DIRECT,10_000,0); // BB
+        if(token==0x822CC93fFD030293E9842c30BBD678F530701867)return(DIRECT,3_000,0); // BE
+        if(token==0xceF9027c7d6985b85f0BA431125073529A947A68)return(DIRECT,10_000,0); // BULL
+        if(token==0xCEC185eB182c47d1bA1EFc84e6959e18cd620Be4)return(DIRECT,3_000,0); // cbBTC
+        if(token==0x9651342CeA770aE9a2969Ba2A52611523146aef9)return(VIA_USDG,100,10_000); // CCL
+        if(token==0xaE517A2903E68bd929Dfd15be875F8369D53e94a)return(VIA_USDG,100,10_000); // CEG
+        if(token==0x6330D8C3178a418788dF01a47479c0ce7CCF450b)return(DIRECT,3_000,0); // COIN
+        if(token==0x4EA005168D7F09a7A0Ba9D1DEf21a479950E44C2)return(VIA_USDG,100,3_000); // COST
+        if(token==0xdF0992E440dD0be65BD8439b609d6D4366bf1CB5)return(VIA_USDG,100,3_000); // CRCL
+        if(token==0x941AE714EC6D8130c7B75d67160Ca08f1e7d11Dd)return(VIA_USDG,100,10_000); // DELL
+        if(token==0x1D11f0496982706C5e14A514D4E79F2e6BdE4516)return(DIRECT,3_000,0); // DJT
+        if(token==0x25C288E6D899b9BC30160965aD9644c67e73bE0C)return(VIA_USDG,100,3_000); // F
+        if(token==0x41F4267525a8AFf329540eF24fD83d9044758B33)return(VIA_USDG,100,3_000); // FIG
+        if(token==0x03BC731Ffb162cdd7B98D3C6542bFC291126075d)return(VIA_USDG,100,10_000); // FLY
+        if(token==0xC9a981FEE1F9DEc688bb123ccDeCc63D0deBFC4e)return(VIA_USDG,100,500); // GLD
+        if(token==0x1b0E319c6A659F002271B69dB8A7df2F911c153E)return(VIA_USDG,100,500); // GME
+        if(token==0x2e0847E8910a9732eB3fb1bb4b70a580ADAD4FE3)return(DIRECT,100,0); // GOOGL
+        if(token==0xCceE82fE024c36fA15E1005edE3E9e4787e23D09)return(VIA_USDG,100,3_000); // HIMS
+        if(token==0x59dd09d4900C2E4B5F75b7c0d4E6796fcc234Cb1)return(VIA_USDG,100,3_000); // HPE
+        if(token==0x980dcf6766FA79f5Cf0c4AAdb3ab477ff15a9619)return(VIA_USDG,100,3_000); // IBM
+        if(token==0xACEF2e09adb47aD6aBeBAD9fF06689E60615C2B6)return(DIRECT,3_000,0); // INDA
+        if(token==0xc72b96e0E48ecd4DC75E1e45396e26300BC39681)return(VIA_USDG,100,3_000); // INTC
+        if(token==0x03DfbBE0AC4E7bCDaFd08eD41A400326B77D8c80)return(VIA_USDG,100,3_000); // JNJ
+        if(token==0x8005d266423c7ea827372c9c864491e5786600ea)return(VIA_USDG,100,500); // LLY
+        if(token==0x4e62068525Ab11FE768e29dfD00ef909B9803016)return(VIA_USDG,100,3_000); // LULU
+        if(token==0xc0D6457C16Cc70d6790Dd43521C899C87ce02f35)return(DIRECT,3_000,0); // META
+        if(token==0x43B07D15cE533bEc5476d70C22a78a1B2B662155)return(VIA_USDG,100,3_000); // MRNA
+        if(token==0x62fd0668e10D8B72339BE2DCF7643001688ff13B)return(DIRECT,3_000,0); // MRVL
+        if(token==0xe93237C50D904957Cf27E7B1133b510C669c2e74)return(VIA_USDG,100,3_000); // MSFT
+        if(token==0xec262a75e413fAfD0dF80480274532C79D42da09)return(VIA_USDG,100,3_000); // MSTR
+        if(token==0xfF080c8ce2E5feadaCa0Da81314Ae59D232d4afD)return(DIRECT,3_000,0); // MU
+        if(token==0x116F00968269B7bfbaD4109cE591d6E74c0601d4)return(VIA_USDG,100,10_000); // NET
+        if(token==0xE0444EF8BF4eD74f74FD73686e2ddF4C1c5591E8)return(VIA_USDG,100,3_000); // NFLX
+        if(token==0x408c14038a04f7bD235329E26d2bf569ee20e250)return(VIA_USDG,100,10_000); // NU
+        if(token==0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC)return(DIRECT,500,0); // NVDA
+        if(token==0xbBD09F72b025360FeE5C928053Dca6248d35be54)return(VIA_USDG,100,10_000); // ON
+        if(token==0x7066A64c24e4206CD62E83bf198c1E7EB361F51e)return(VIA_USDG,100,3_000); // PFE
+        if(token==0x894E1EC2D74FFE5AEF8Dc8A9e84686acCB964F2A)return(VIA_USDG,100,3_000); // PLTR
+        if(token==0xD5f3879160bc7c32ebb4dC785F8a4F505888de68)return(VIA_USDG,100,500); // QQQ
+        if(token==0x59818904ab4cE163b3cE4FfB64f2D6Ca02c434B4)return(VIA_USDG,100,3_000); // QUBT
+        if(token==0xF0C4BF4C582cb3836e98394b1d4e7B7281101bE8)return(DIRECT,3_000,0); // RBLX
+        if(token==0xFDE6b5d9BB419B10C23268c74e369AbFF39C0460)return(VIA_USDG,100,10_000); // RCAT
+        if(token==0x05b37Fb53A299a1b874A619e1c4C404D52C36F4C)return(DIRECT,3_000,0); // RDDT
+        if(token==0xB1BF26c1D20ff267A4f93550d1E0d06ac40a114B)return(VIA_USDG,100,3_000); // RIVN
+        if(token==0x756Bc80af765C82da966a788858d65aDF14f3793)return(VIA_USDG,100,10_000); // RUN
+        if(token==0x92FD66527192E3e61d4DDd13322Aa222DE86F9B5)return(VIA_USDG,100,500); // SGOV
+        if(token==0xF53F66751B1Eff985311b693531E3290F600c410)return(VIA_USDG,100,10_000); // SHOP
+        if(token==0xBE274710Bf3d9567e1B290eF6a5F9f90ca016FD8)return(VIA_USDG,100,3_000); // SHY
+        if(token==0x84CAb63bc87912E71ad199ff14A0bA45de68FeF8)return(VIA_USDG,100,3_000); // SKHY
+        if(token==0x411eFb0E7f985935DAec3D4C3ebaEa0d0AD7D89f)return(VIA_USDG,100,500); // SLV
+        if(token==0xF6589F11Bc40b669e584073F428B05562F568733)return(VIA_USDG,100,3_000); // SNAP
+        if(token==0xB90A19fF0Af67f7779afF50A882A9CfF42446400)return(DIRECT,3_000,0); // SNDK
+        if(token==0x6E3Dfd9f7e1649BaA14D25cac18C94d62dB10A54)return(VIA_USDG,100,3_000); // SOUN
+        if(token==0x75742c18BC1f1C5c5f448f4C9D9C6F66dafAAa38)return(VIA_USDG,100,3_000); // SOXX
+        if(token==0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa)return(VIA_USDG,100,500); // SPCX
+        if(token==0x117cc2133c37B721F49dE2A7a74833232B3B4C0C)return(VIA_USDG,100,500); // SPY
+        if(token==0x322F0929c4625eD5bAd873c95208D54E1c003b2d)return(VIA_USDG,100,500); // TSLA
+        if(token==0x58FfE4a942d3885bAa22D7520691F611EF09e7AA)return(DIRECT,3_000,0); // TSM
+        if(token==0x5e81213613b6B86EaB4c6c50d718d34359459786)return(VIA_USDG,100,500); // TTWO
+        if(token==0xf23250dac154D05Bb671CB0d0eBEf3c635c79CE2)return(VIA_USDG,100,3_000); // UPS
+        if(token==0xd917B029C761D264c6A312BBbcDA868658eF86a6)return(VIA_USDG,100,3_000); // USAR
+        if(token==0xa30FA36Db767ad9eD3f7a60fC79526fB4d56D344)return(VIA_USDG,100,3_000); // USO
+        if(token==0x348Be1A8663f15edDe5CDf8A96BB69078f7aB6Fd)return(VIA_USDG,100,10_000); // WULF
+        if(token==0x9e7ABD3C9139D14E4c86DcE0e455AAB7A0C2FB3E)return(VIA_USDG,100,3_000); // WYFI
+        return(0,0,0);
+    }
+}

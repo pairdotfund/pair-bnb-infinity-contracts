@@ -1,0 +1,317 @@
+{
+  "chainId": 56,
+  "entries": [
+    {
+      "address": "0x01d6f615032DC9fcF8531e0F9007C0C954b31b64",
+      "contract": "BnbInfinityStandardHook",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "6zxzphbx1yxqv9p4ugablkmcr9e8pupurempczcdhqdvnmyx4p",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x01d6f615032DC9fcF8531e0F9007C0C954b31b64#code"
+    },
+    {
+      "address": "0x902d4Af4615Ce00399a0Cda971482EB901F5dF3d",
+      "contract": "BnbInfinityStandardNftHook",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "jsjyxgarumy2w4fahgj5jychr4hzzcid46w5fslafdf4dcm61k",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x902d4Af4615Ce00399a0Cda971482EB901F5dF3d#code"
+    },
+    {
+      "address": "0xE2c57346464C92c6628c5DEB9f493AF14fd7B623",
+      "contract": "BnbInfinityPoolBootstrapperUpgradeable",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0xE2c57346464C92c6628c5DEB9f493AF14fd7B623#code"
+    },
+    {
+      "address": "0x56b96eD92eebE4485E4e00Fe1a27B6b54989D026",
+      "contract": "BnbInfinityCreationDeployersUpgradeable",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x56b96eD92eebE4485E4e00Fe1a27B6b54989D026#code"
+    },
+    {
+      "address": "0x058e2e45bBa56c68b83228c77AB4c463Ed0F8BEF",
+      "contract": "BnbInfinityCreditVaultDeployer",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x058e2e45bBa56c68b83228c77AB4c463Ed0F8BEF#code"
+    },
+    {
+      "address": "0xE72f35fD1Fd8d7CeBA58845372F39fa6EFB34ABe",
+      "contract": "BnbInfinityCreditLaunchFactory",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0xE72f35fD1Fd8d7CeBA58845372F39fa6EFB34ABe#code"
+    },
+    {
+      "address": "0x5BDf9692955f0703B57Acf711E533626D2DD0c2A",
+      "contract": "BnbInfinityStandardNativeBuy",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "ng9cxqg1qbfmw4umqhn5gs1ngr4xd7gqf6gvztukpwgvmpvm4x",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x5BDf9692955f0703B57Acf711E533626D2DD0c2A#code"
+    },
+    {
+      "address": "0x43A58a59dDD7dBEF6ae0E53514b222E7b4124824",
+      "contract": "BnbInfinityStandardRouterTransport",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "aycskiiqgchnefjhwlxmhjhelgfqnvacrx3hpbx5hs3rcwwrh4",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x43A58a59dDD7dBEF6ae0E53514b222E7b4124824#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x47fF492d81818585684cF4C531047E8E03B0d70c",
+      "contract": "BnbInfinityStandardDirectBuy",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "wcsdiafnn3uigshchra1e99hsnhpymbbhxq47ajrt1zptzgmp1",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x47fF492d81818585684cF4C531047E8E03B0d70c#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x02079a801744beAE795E105288E0D85978f84B5B",
+      "contract": "BnbInfinityLaunchEngineUpgradeable",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "vhfnpm4akwtspbst1k2d67yiyd9kpthuzyswwti41wrnybcqx1",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x02079a801744beAE795E105288E0D85978f84B5B#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x278D14380B7BaFFcCB924572aA53aE4b82446426",
+      "contract": "BnbNFTCollectionProxyDeployerUpgradeable",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "4vkrtlq3htyarhevyraajrwjphsyuegcyeymidcifcbsc5mnri",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x278D14380B7BaFFcCB924572aA53aE4b82446426#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x4aCCc9c722A1b0a695048cD26cD353E35E17f6F2",
+      "contract": "BnbNFTProxyFactoryUpgradeable",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "ewxr1ercbcthz4dmbcksdmfsj7ec7kvv7brkfzdtmg2zpye8fq",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x4aCCc9c722A1b0a695048cD26cD353E35E17f6F2#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x8d63721Cb088530CD5c6Bd0Eb9C3dc24C5696D07",
+      "contract": "BnbInfinityStandardNftDirectBuy",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "qqjh5vglk6kjmjwf7qmzdwpdfjbw2tvgtgih6y2mem7nqvay26",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x8d63721Cb088530CD5c6Bd0Eb9C3dc24C5696D07#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x8e2117ECCb8C1Ec2E39aa0e29A45Bf7e229bd3cA",
+      "contract": "BnbInfinityNftLaunchModuleUpgradeable",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "gkazdxhqjhvrrzzec1v5dwnx1yvedu67r8tmiwkubbkzymedjs",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x8e2117ECCb8C1Ec2E39aa0e29A45Bf7e229bd3cA#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x3C62F03590fC6ef72e7B8A9e5D20BF66335e1eb4",
+      "contract": "BnbInfinityCreditProtocolVault",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "jcjyqrrxf43jukc5x7cdtlftvrgqchmqhibxus8crrvt3xphey",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x3C62F03590fC6ef72e7B8A9e5D20BF66335e1eb4#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x9e0c4C1EF627915dB361110b1bDb30f69E4Bd506",
+      "contract": "BnbInfinityCreditNftCollection",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "eeblyau5q84pbh6kh4dbe7dkn2cn2xpsuttw4dbzkbvqyyrqxg",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x9e0c4C1EF627915dB361110b1bDb30f69E4Bd506#code",
+      "jobStatus": "QUEUED"
+    },
+    {
+      "address": "0x937AE9Ed602367C078bF966e86894f8bA476731A",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "vggembx4zf23dgbpaj6mwgfsus9pzejhvmzrrdlhffn5tyy5pi",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x3c62f03590fc6ef72e7b8a9e5d20bf66335e1eb4",
+      "link": "https://bscscan.com/address/0x937AE9Ed602367C078bF966e86894f8bA476731A#code"
+    },
+    {
+      "address": "0x34097fcc9a41bECCA8fc66508F79a0835DE0ca43",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "ynf5bynquzb1mphedaaebezrmcfmry2zb5iq9dhdbeq8bqv8bp",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0xe2c57346464c92c6628c5deb9f493af14fd7b623",
+      "link": "https://bscscan.com/address/0x34097fcc9a41bECCA8fc66508F79a0835DE0ca43#code"
+    },
+    {
+      "address": "0x96A3CEB947B17c3ac751921BbA373823eF4d33c0",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "uaczgsgf6trnwrhpbpei7dpsvwkg3mu7nhrltzwy41tkuycair",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x56b96ed92eebe4485e4e00fe1a27b6b54989d026",
+      "link": "https://bscscan.com/address/0x96A3CEB947B17c3ac751921BbA373823eF4d33c0#code"
+    },
+    {
+      "address": "0x6b46DFbeEa90FeD30A6A17d6d6A7294595071649",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "mfwwiglk3kybckrisd1xvcu6e6b4qxjaxczedrzaz8xk1uqiua",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x058e2e45bba56c68b83228c77ab4c463ed0f8bef",
+      "link": "https://bscscan.com/address/0x6b46DFbeEa90FeD30A6A17d6d6A7294595071649#code"
+    },
+    {
+      "address": "0x99a2bd48a751988bfD215aE9568E01eA13F831d5",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "zvkbun9mgbdimseyirjnx83ycahajx2jenul9x44kad7qhaz91",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0xe72f35fd1fd8d7ceba58845372f39fa6efb34abe",
+      "link": "https://bscscan.com/address/0x99a2bd48a751988bfD215aE9568E01eA13F831d5#code"
+    },
+    {
+      "address": "0xdC99aB33Dd879e82E094134257DDAc8F10E04031",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "hkg94rtmqk7z2iau4qyupmnf2nwv9vz92jfh36i3snzixmyjym",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x5bdf9692955f0703b57acf711e533626d2dd0c2a",
+      "link": "https://bscscan.com/address/0xdC99aB33Dd879e82E094134257DDAc8F10E04031#code"
+    },
+    {
+      "address": "0x98Ae936E1048D5682f6E9E1e89C0b2A90B932aC4",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "ekafbwy27gnxeulxxidtsy6wbsmwigqbpmsezn8j92zdfujfyz",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x43a58a59ddd7dbef6ae0e53514b222e7b4124824",
+      "link": "https://bscscan.com/address/0x98Ae936E1048D5682f6E9E1e89C0b2A90B932aC4#code"
+    },
+    {
+      "address": "0xCEaE6eEb90375fbD9F29D427deab0df32478d428",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "mv8wwfrfku2i4uvjygiapwxpygtbywt5rgseazru1bsrfxbu9j",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x47ff492d81818585684cf4c531047e8e03b0d70c",
+      "link": "https://bscscan.com/address/0xCEaE6eEb90375fbD9F29D427deab0df32478d428#code"
+    },
+    {
+      "address": "0xC31F8F03fc00E26A8b813Aa36B36B04032a5e589",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "jdyawjpphziazvx2qg5sw1uw3xfrpw78ctep128z2kkiw2fuaa",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x02079a801744beae795e105288e0d85978f84b5b",
+      "link": "https://bscscan.com/address/0xC31F8F03fc00E26A8b813Aa36B36B04032a5e589#code"
+    },
+    {
+      "address": "0x7650f6a325DF0A9824392C51664cE263AED97A5c",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "qqgfvfee4j93jsrcar2xqbaujqyughi7wig1wjrcbuipb7izlu",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0xe2c57346464c92c6628c5deb9f493af14fd7b623",
+      "link": "https://bscscan.com/address/0x7650f6a325DF0A9824392C51664cE263AED97A5c#code"
+    },
+    {
+      "address": "0x8d9C28C037c02c49FFeB372BBa74d715B817a340",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "p917j8rrxwyx4tibuhnbg4t5f4bpmgbmrk9fsnal4cfeany2xn",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x56b96ed92eebe4485e4e00fe1a27b6b54989d026",
+      "link": "https://bscscan.com/address/0x8d9C28C037c02c49FFeB372BBa74d715B817a340#code"
+    },
+    {
+      "address": "0xf11000dCa9DdC753491c0E3Ad27c3C6ECe93F283",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "zhnekqyjqfmfgp1xhn3hzyrnad46j1vq2fwcicw2gsaa8lu4qi",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x278d14380b7baffccb924572aa53ae4b82446426",
+      "link": "https://bscscan.com/address/0xf11000dCa9DdC753491c0E3Ad27c3C6ECe93F283#code"
+    },
+    {
+      "address": "0xb42Ec8Ae741b87AAcd7AFC02b3fBEB7D293468C1",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "fnrta2rz47lszqjnd1spf5s218phgpi1g2l9zz6vc98pffsksk",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x4accc9c722a1b0a695048cd26cd353e35e17f6f2",
+      "link": "https://bscscan.com/address/0xb42Ec8Ae741b87AAcd7AFC02b3fBEB7D293468C1#code"
+    },
+    {
+      "address": "0x2Cd0a7cEA31c44738E97FeAA32268D291eBB4125",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "7y9bvbmpid5hm61ndzbcg1fsxn696khu9eql2lhpseiwwimsjd",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x5bdf9692955f0703b57acf711e533626d2dd0c2a",
+      "link": "https://bscscan.com/address/0x2Cd0a7cEA31c44738E97FeAA32268D291eBB4125#code"
+    },
+    {
+      "address": "0x7564dd9d59F247421238749E6985aC1De358D2b2",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "ksd2anfmvvgapn226barhq1qvvhbidhrimmqwv9ukhnkvrvwnz",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x43a58a59ddd7dbef6ae0e53514b222e7b4124824",
+      "link": "https://bscscan.com/address/0x7564dd9d59F247421238749E6985aC1De358D2b2#code"
+    },
+    {
+      "address": "0xF8bBFe18AfcEF3930DfCff8A5d0F97783fd61190",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "rqyiu7jifz6cixvcy7ffmrimjthjweafruuhwslisi78hfwl1t",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x8d63721cb088530cd5c6bd0eb9c3dc24c5696d07",
+      "link": "https://bscscan.com/address/0xF8bBFe18AfcEF3930DfCff8A5d0F97783fd61190#code"
+    },
+    {
+      "address": "0x8a212b62EE76F2DbB7529715Db321876383199d4",
+      "contract": "ERC1967Proxy",
+      "status": "SIMILAR_MATCH",
+      "guid": "kfbugz7kp2qbmsysmp3dg7kxp4kavfvxi4uuuwcubc3ktrxgar",
+      "similarMatch": "0x749161eC173E8F67fC60ea1c5d1287E63DF0E17a",
+      "explorerImplementation": "0x8e2117eccb8c1ec2e39aa0e29a45bf7e229bd3ca",
+      "link": "https://bscscan.com/address/0x8a212b62EE76F2DbB7529715Db321876383199d4#code"
+    },
+    {
+      "address": "0x9A308E7c71B0594226b5c4AC2FcD465960cCd0E8",
+      "contract": "BnbInfinityStandardHookCutover",
+      "status": "VERIFIED_SOURCE_READBACK",
+      "guid": "t7incekffdfwejvjsix4yrd9tw4bdxy41flqnmrqapgzefxiea",
+      "similarMatch": null,
+      "explorerImplementation": null,
+      "link": "https://bscscan.com/address/0x9A308E7c71B0594226b5c4AC2FcD465960cCd0E8#code",
+      "jobStatus": "QUEUED"
+    }
+  ]
+}

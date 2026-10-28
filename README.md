@@ -1,3 +1,32 @@
+<!-- PAIR-STANDARD-ROUTING -->
+# PAIR BNB Infinity contracts
+
+## Current active release: standard Infinity routing
+
+New launches use immutable hooks compatible with PancakeSwap's official CLQuoter and Universal Router.
+The old adapter-restricted pools retain their original contracts and source evidence.
+
+- [Current release: contracts, behavior and reproduction](releases/standard-routing/README.md)
+- [Deployment manifest and exact constructor/compiler bindings](releases/standard-routing/manifest.json)
+- [BscScan source-readback results](releases/standard-routing/reports/bscscan-verification.json)
+- [Sourcify: exact creation and runtime matches for all 34 deployed targets](releases/standard-routing/reports/sourcify-verification.json)
+- [Reproducible build: all 21 packaged contracts](releases/standard-routing/reports/build-reproducibility.json)
+
+| Hook | BNB mainnet explorer |
+| --- | --- |
+| Standard modes | [0x01d6f615032DC9fcF8531e0F9007C0C954b31b64](https://bscscan.com/address/0x01d6f615032DC9fcF8531e0F9007C0C954b31b64#code) |
+| NFT rewards | [0x902d4Af4615Ce00399a0Cda971482EB901F5dF3d](https://bscscan.com/address/0x902d4Af4615Ce00399a0Cda971482EB901F5dF3d#code) |
+
+Both hooks are immutable; privileged owner policy controls and upgradeable platform dependencies remain.
+Permissionless fee settlement cannot redirect accrued rewards. Native funding helpers are optional, not required swap senders.
+All 34 deployed targets have exact creation/runtime matches on Sourcify.
+BscScan verification is a separate process: consult its report for pending jobs and similar matches; do not assume source readback is complete.
+Source verification is **not** an independent audit or whitelist/terminal-integration approval.
+
+## Retained releases
+
+The following source and remediation history describes retained, earlier pools, not the current standard-routing hooks:
+
 # PAIR BNB Infinity — immutable hooks
 
 **Deployed on BNB Chain mainnet. Not independently audited. Not approved or whitelisted by PancakeSwap.**

@@ -1,0 +1,783 @@
+{
+  "status": "CANDIDATE_ROUTING_AND_PERMISSIONLESS_SETTLEMENT_PASSED",
+  "failures": [],
+  "localOnly": true,
+  "mainnetWrites": false,
+  "productionActivated": false,
+  "coldQuoteBlocked": false,
+  "anchor": {
+    "number": 130271586,
+    "hash": "0x7a625ee4e8ec623c4c94f86d3070de447d0eec3978f6a64079e0297384e13357",
+    "timestamp": 1793186141
+  },
+  "infrastructureCode": {
+    "vault": {
+      "address": "0x238a358808379702088667322f80aC48bAd5e6c4",
+      "runtimeHash": "0x678bab6ace02b3fc508054b194f3f70190a0621f51bcae69be33cc5416031908"
+    },
+    "manager": {
+      "address": "0xa0FfB9c1CE1Fe56963B0321B32E7A0302114058b",
+      "runtimeHash": "0x3caf72836cb6603c6af03bba1578ec70ece8c3e5b1d0ef73667b5fbd74b02a0f"
+    },
+    "positions": {
+      "address": "0x55f4c8abA71A1e923edC303eb4fEfF14608cC226",
+      "runtimeHash": "0xe8fea1721cd1cb164280e02614b06d7d8033dcc81ed6fa97f5e7cc63341d34ed"
+    },
+    "quoter": {
+      "address": "0xd0737C9762912dD34c3271197E362Aa736Df0926",
+      "runtimeHash": "0xea33a8800aa8ae11b9f480ad21b06e5708f9a1989b88cd8f270e43a8b8a223ce"
+    },
+    "router": {
+      "address": "0xd9C500DfF816a1Da21A48A732d3498Bf09dc9AEB",
+      "runtimeHash": "0x475a0fac42fef6f5939a066498de529e7b79906eccfbb147ace899c8d21a898b"
+    },
+    "permit2": {
+      "address": "0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768",
+      "runtimeHash": "0xb8e27757651b074ffccdca43caff003b9f071d45ee74c379fad1a5a67ecaf9d6"
+    },
+    "wrapped": {
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "runtimeHash": "0xb7d84205eaaf83ce7b3940c6beaad6d22790255e34a9a2b486aa8cdfff118fe6"
+    },
+    "v3Factory": {
+      "address": "0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865",
+      "runtimeHash": "0x8191d3ab1d55d3da9822199f28865415c99566b6f1aee4a4b16713f57930678c"
+    },
+    "v3Router": {
+      "address": "0x1b81D678ffb9C0263b24A97847620C99d213eB14",
+      "runtimeHash": "0x61002a11263b2c38ff8d5ded90a655987ed98f171a31840ee0014dd7052bccda"
+    }
+  },
+  "candidateBuilds": {
+    "BnbInfinityLaunchpad": {
+      "bytecodeHash": "0xf80ef735c0cf90412a5aba06b185e56884a1585ecaa3d9bace764b44fdab76dc",
+      "runtimeTemplateHash": "0x006cdd1ec4bf1be1c47aeebf96bd213ea74ebb0ea5e011733d8784b4970bcf90",
+      "runtimeBytes": 9067
+    },
+    "ERC1967Proxy": {
+      "bytecodeHash": "0x10f7595636141de153c18cc7e51198dce23181ad8d97de38015bdad673b7e018",
+      "runtimeTemplateHash": "0xdf4d2294bc2e05bdf1b156ed6000a5b73fc00b1a70fc143004fdfd781074e8a2",
+      "runtimeBytes": 130
+    },
+    "BnbInfinityCreditProtocolVault": {
+      "bytecodeHash": "0xa6df4c2bfe481bfe235684695cf01ff16f775c083536c9e0bbc15921bf14d7c7",
+      "runtimeTemplateHash": "0x887aa4833ca60a8eac6b05009721d7b1e82bbbe60b84250cde62d3a4103d974e",
+      "runtimeBytes": 5632
+    },
+    "BnbInfinityStandardHook": {
+      "bytecodeHash": "0x34a4fc6df5eca551b1c2312cf0294980e624f271b0c5b90704cf1ebaf6ad36bf",
+      "runtimeTemplateHash": "0x6a41225314d2e693c27203ff007b7a12b7438d71d1943cb4f31ae3c7a1d88e8e",
+      "runtimeBytes": 10568
+    },
+    "BnbInfinityPoolBootstrapperUpgradeable": {
+      "bytecodeHash": "0x46dc240348dfe964b383aa6a6d9ca952ff8dbd10e910c1d64ee6d99041d28d5c",
+      "runtimeTemplateHash": "0x4532fe0be5eb4da676d93fa68c8547415bda750dc81b99d12776d6c0b2e954bd",
+      "runtimeBytes": 7144
+    },
+    "BnbInfinityCreationDeployersUpgradeable": {
+      "bytecodeHash": "0x36233429ce0b2e2da2b90def500c949273b13202be124d38fa708a9a2b25183f",
+      "runtimeTemplateHash": "0x069b6190f22c630a61d1b8c4ddcb1d9b9d653070976e2fcb496b1210f503a6d0",
+      "runtimeBytes": 16902
+    },
+    "BnbInfinityCreditVaultDeployer": {
+      "bytecodeHash": "0x8cac5082c7b08775a244ca077c2cb17cef186821dfdabff441ff08f5bc516cad",
+      "runtimeTemplateHash": "0x2ecf5477d82a264ba9446e6a3265f894d46a789757583b21568ebc58a1901084",
+      "runtimeBytes": 16000
+    },
+    "BnbInfinityCreditLaunchFactory": {
+      "bytecodeHash": "0x143ccffbe1718ee3cc59b17ed5a300c0d37644d8985d8a635a5f405d474097b9",
+      "runtimeTemplateHash": "0x70fc96f5fb02374974a2ba86cc58f610976594a16ccbe3483ce4adf571b644a0",
+      "runtimeBytes": 17215
+    },
+    "BnbInfinityStandardRouterTransport": {
+      "bytecodeHash": "0x0c8bdc0af5a5b8d36cf57023ba77a433605d7ce55464e4493e4c4faf77decc6c",
+      "runtimeTemplateHash": "0x29c2b73974c167dc4b0b74e062aa8c2fbe04f1ad8da75620d921642fe5c41aa6",
+      "runtimeBytes": 6917
+    },
+    "BnbInfinityStandardNativeBuy": {
+      "bytecodeHash": "0xffb2266c2c325824d42e1c5d12bd38078af44051e35823e3e91af5e99fad8de9",
+      "runtimeTemplateHash": "0x3a4e390e1ed09c0b715aec80973c770a76368bfedd4a1355041a042bb1aae728",
+      "runtimeBytes": 16677
+    },
+    "BnbInfinityStandardDirectBuy": {
+      "bytecodeHash": "0x041991e1324b94fc8a48fea391c45e28e4135d4099626d95ce809aeed228bdeb",
+      "runtimeTemplateHash": "0x6f8bb8596b83ea38ebc961528bef97af2902faa8d06e7bf95f8c9cca61cd066e",
+      "runtimeBytes": 7966
+    },
+    "BnbInfinityLaunchEngineUpgradeable": {
+      "bytecodeHash": "0x76fcbd4d348b23924609ebce482fa46d3df8fe4e83a4b3a195ef8674dfc8c67d",
+      "runtimeTemplateHash": "0xb7562c8b679ebb2d993005877d2333eb9c24748db29ecd562c2d4c8b4488ead8",
+      "runtimeBytes": 12853
+    },
+    "BnbInfinityCreditNftCollection": {
+      "bytecodeHash": "0xa809ffd39587a0bb4de95d7b5cb1605ce08c31db6660b123aab840efb082b65a",
+      "runtimeTemplateHash": "0x6ad1b3e238d03ba395b91f0ac10b7b19f2679d43d8e77dcc8e6f69f73b221cda",
+      "runtimeBytes": 13524
+    },
+    "BnbInfinityStandardNftHook": {
+      "bytecodeHash": "0x5e9611ba2e32d5352df62505f3a149eae898cf8ccbab793b3ec373857a8a61c7",
+      "runtimeTemplateHash": "0xbbb9d0646e8f7fffbb20d26aae825bee5504b36a46c2a507648e6438703f7460",
+      "runtimeBytes": 10775
+    },
+    "BnbNFTCollectionProxyDeployerUpgradeable": {
+      "bytecodeHash": "0xa3e86dbaf6bc1e0c078ac112a9e463ea27e0d1debc413357afd104bdfbf3450d",
+      "runtimeTemplateHash": "0x06ba50fee1ca92a4053a4b0eb27dfac7c55c432c420e199669f889c0557c185f",
+      "runtimeBytes": 3895
+    },
+    "BnbNFTProxyFactoryUpgradeable": {
+      "bytecodeHash": "0x350cf9feea8589965b5149e1a0cde12f4f5017aaaeddd9c7f3b940efcb3c1bb5",
+      "runtimeTemplateHash": "0x0c24cdf17c0e8b8aaa0290a4df789bd8400d8914ce1fe67d80099f109f00d957",
+      "runtimeBytes": 6176
+    },
+    "BnbInfinityStandardNftDirectBuy": {
+      "bytecodeHash": "0xc468ccd8c925b29d7162f5cbd5b4de44711425e9f1d3f5d062fb88a9ebcf7d07",
+      "runtimeTemplateHash": "0x8ec85d71dde1cbfc7ef7c24cd9af4edfb9b5de73976411a3ab4e87b3d0487755",
+      "runtimeBytes": 8949
+    },
+    "BnbInfinityNftLaunchModuleUpgradeable": {
+      "bytecodeHash": "0x076308e4510386e69cdc8db32c01b7415124df1ad322b0b58dba9f40b55c6c1f",
+      "runtimeTemplateHash": "0xaf7a92747b7b78a0b8e00f5669638aebaa65267e0621bfd4349258e89d67eb74",
+      "runtimeBytes": 14813
+    },
+    "BnbInfinityTestHelpers": {
+      "bytecodeHash": "0x8264a67ed27b299dc845c8417bf2a7c4c0c3e40df4aabbc822faadfdcd57356f",
+      "runtimeTemplateHash": "0xa7e8ab79174b3232fb8b654376020ed3301162b855936a126ce31f69102bd5b3",
+      "runtimeBytes": 945
+    }
+  },
+  "releaseBlockers": [
+    "New native/direct developer-buy executors and app release selection are not activated.",
+    "No deployment approval, final release attestation or public explorer verification for the candidate."
+  ],
+  "infrastructure": {
+    "vault": "0x238a358808379702088667322f80aC48bAd5e6c4",
+    "manager": "0xa0FfB9c1CE1Fe56963B0321B32E7A0302114058b",
+    "positions": "0x55f4c8abA71A1e923edC303eb4fEfF14608cC226",
+    "quoter": "0xd0737C9762912dD34c3271197E362Aa736Df0926",
+    "router": "0xd9C500DfF816a1Da21A48A732d3498Bf09dc9AEB",
+    "permit2": "0x31c2F6fcFf4F8759b3Bd5Bf0e1084A055615c768",
+    "wrapped": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+    "v3Factory": "0x0BFbCF9fa4f9C56B0F40a671Ad40E0805A091865",
+    "v3Router": "0x1b81D678ffb9C0263b24A97847620C99d213eB14"
+  },
+  "checks": [
+    {
+      "mode": 0,
+      "project": "0x51a3514137e2ec802FCe969bA98bD2E04109e217",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "476336960245538226427805",
+      "spent": "1000000000000000",
+      "received": "476336960245538226427805"
+    },
+    {
+      "mode": 0,
+      "project": "0x51a3514137e2ec802FCe969bA98bD2E04109e217",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "23816848012276911321390",
+      "quoted": "48336335372018",
+      "spent": "23816848012276911321390",
+      "received": "48336335372018"
+    },
+    {
+      "mode": 0,
+      "project": "0x51a3514137e2ec802FCe969bA98bD2E04109e217",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "209990536601",
+      "spent": "209990536601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 0,
+      "project": "0x51a3514137e2ec802FCe969bA98bD2E04109e217",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "492734739507979644892",
+      "spent": "492734739507979644892",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 1,
+      "project": "0x581550d667732543dece9f3E6DEffbAF9284343e",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452455278758783129306982",
+      "spent": "1000000000000000",
+      "received": "452455278758783129306982"
+    },
+    {
+      "mode": 1,
+      "project": "0x581550d667732543dece9f3E6DEffbAF9284343e",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22622763937939156465349",
+      "quoted": "43609100428313",
+      "spent": "22622763937939156465349",
+      "received": "43609100428313"
+    },
+    {
+      "mode": 1,
+      "project": "0x581550d667732543dece9f3E6DEffbAF9284343e",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220452329601",
+      "spent": "220452329601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 1,
+      "project": "0x581550d667732543dece9f3E6DEffbAF9284343e",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517312647535084344921",
+      "spent": "517312647535084344921",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 2,
+      "project": "0xaD351a2cd3d59eEb397799Ad635B3525A8561A04",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452520112233261315106415",
+      "spent": "1000000000000000",
+      "received": "452520112233261315106415"
+    },
+    {
+      "mode": 2,
+      "project": "0xaD351a2cd3d59eEb397799Ad635B3525A8561A04",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22626005611663065755320",
+      "quoted": "43623605829536",
+      "spent": "22626005611663065755320",
+      "received": "43623605829536"
+    },
+    {
+      "mode": 2,
+      "project": "0xaD351a2cd3d59eEb397799Ad635B3525A8561A04",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220490702561",
+      "spent": "220490702561",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 2,
+      "project": "0xaD351a2cd3d59eEb397799Ad635B3525A8561A04",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517369975158699186646",
+      "spent": "517369975158699186646",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 3,
+      "project": "0x0675822D2285a5A95E0263d9f484bbB678A3792E",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452455278758783129306982",
+      "spent": "1000000000000000",
+      "received": "452455278758783129306982"
+    },
+    {
+      "mode": 3,
+      "project": "0x0675822D2285a5A95E0263d9f484bbB678A3792E",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22622763937939156465349",
+      "quoted": "43609100428313",
+      "spent": "22622763937939156465349",
+      "received": "43609100428313"
+    },
+    {
+      "mode": 3,
+      "project": "0x0675822D2285a5A95E0263d9f484bbB678A3792E",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220452329601",
+      "spent": "220452329601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 3,
+      "project": "0x0675822D2285a5A95E0263d9f484bbB678A3792E",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517312647535084344921",
+      "spent": "517312647535084344921",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 4,
+      "project": "0x91F10443b29D12640b2813087Db5332395EF305b",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452455278758783129306982",
+      "spent": "1000000000000000",
+      "received": "452455278758783129306982"
+    },
+    {
+      "mode": 4,
+      "project": "0x91F10443b29D12640b2813087Db5332395EF305b",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22622763937939156465349",
+      "quoted": "43609100428313",
+      "spent": "22622763937939156465349",
+      "received": "43609100428313"
+    },
+    {
+      "mode": 4,
+      "project": "0x91F10443b29D12640b2813087Db5332395EF305b",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220452329601",
+      "spent": "220452329601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 4,
+      "project": "0x91F10443b29D12640b2813087Db5332395EF305b",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517312647535084344921",
+      "spent": "517312647535084344921",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "476336960245538226427805",
+      "spent": "1000000000000000",
+      "received": "476336960245538226427805"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "23816848012276911321390",
+      "quoted": "48336335372018",
+      "spent": "23816848012276911321390",
+      "received": "48336335372018"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "209990536601",
+      "spent": "209990536601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "492734739507979644892",
+      "spent": "492734739507979644892",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452196543627239457460657",
+      "spent": "1000000000000000",
+      "received": "452196543627239457460657"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "45216146056049639646109",
+      "quoted": "87210197887498",
+      "spent": "45216146056049639646109",
+      "received": "87210197887498"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220572231198",
+      "spent": "220572231198",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xbB40d90f44CF39695f0c08B89CAA3386ecab8242",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517031439767828343424",
+      "spent": "517031439767828343424",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 0,
+      "project": "0xD37c105bbfF9083B2EB4Fe306D52a27FE5Dc9BaC",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "476336960245538226428058",
+      "spent": "1000000000000000",
+      "received": "476336960245538226428058"
+    },
+    {
+      "mode": 0,
+      "project": "0xD37c105bbfF9083B2EB4Fe306D52a27FE5Dc9BaC",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "23816848012276911321402",
+      "quoted": "48336335372018",
+      "spent": "23816848012276911321402",
+      "received": "48336335372018"
+    },
+    {
+      "mode": 0,
+      "project": "0xD37c105bbfF9083B2EB4Fe306D52a27FE5Dc9BaC",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "209990536601",
+      "spent": "209990536601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 0,
+      "project": "0xD37c105bbfF9083B2EB4Fe306D52a27FE5Dc9BaC",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "492734739507979644600",
+      "spent": "492734739507979644600",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 1,
+      "project": "0xF806828C30833843729766eE6B417d4EB1D7D78e",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452455278758783129307020",
+      "spent": "1000000000000000",
+      "received": "452455278758783129307020"
+    },
+    {
+      "mode": 1,
+      "project": "0xF806828C30833843729766eE6B417d4EB1D7D78e",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22622763937939156465351",
+      "quoted": "43609100428313",
+      "spent": "22622763937939156465351",
+      "received": "43609100428313"
+    },
+    {
+      "mode": 1,
+      "project": "0xF806828C30833843729766eE6B417d4EB1D7D78e",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220452329601",
+      "spent": "220452329601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 1,
+      "project": "0xF806828C30833843729766eE6B417d4EB1D7D78e",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517312647535084344686",
+      "spent": "517312647535084344686",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 2,
+      "project": "0xD55eb5055e045c38e97d83881d7f00E85B9116b6",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452520112233261315106656",
+      "spent": "1000000000000000",
+      "received": "452520112233261315106656"
+    },
+    {
+      "mode": 2,
+      "project": "0xD55eb5055e045c38e97d83881d7f00E85B9116b6",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22626005611663065755332",
+      "quoted": "43623605829536",
+      "spent": "22626005611663065755332",
+      "received": "43623605829536"
+    },
+    {
+      "mode": 2,
+      "project": "0xD55eb5055e045c38e97d83881d7f00E85B9116b6",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220490702561",
+      "spent": "220490702561",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 2,
+      "project": "0xD55eb5055e045c38e97d83881d7f00E85B9116b6",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517369975158699186339",
+      "spent": "517369975158699186339",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 3,
+      "project": "0xeBcc6308f95029855C20ee4F289Bb6E856646944",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452455278758783129307020",
+      "spent": "1000000000000000",
+      "received": "452455278758783129307020"
+    },
+    {
+      "mode": 3,
+      "project": "0xeBcc6308f95029855C20ee4F289Bb6E856646944",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22622763937939156465351",
+      "quoted": "43609100428313",
+      "spent": "22622763937939156465351",
+      "received": "43609100428313"
+    },
+    {
+      "mode": 3,
+      "project": "0xeBcc6308f95029855C20ee4F289Bb6E856646944",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220452329601",
+      "spent": "220452329601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 3,
+      "project": "0xeBcc6308f95029855C20ee4F289Bb6E856646944",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517312647535084344686",
+      "spent": "517312647535084344686",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 4,
+      "project": "0xD2ab966b2E02500802F8517fdC3cC887eE285D3B",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452455278758783129307020",
+      "spent": "1000000000000000",
+      "received": "452455278758783129307020"
+    },
+    {
+      "mode": 4,
+      "project": "0xD2ab966b2E02500802F8517fdC3cC887eE285D3B",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "22622763937939156465351",
+      "quoted": "43609100428313",
+      "spent": "22622763937939156465351",
+      "received": "43609100428313"
+    },
+    {
+      "mode": 4,
+      "project": "0xD2ab966b2E02500802F8517fdC3cC887eE285D3B",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220452329601",
+      "spent": "220452329601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 4,
+      "project": "0xD2ab966b2E02500802F8517fdC3cC887eE285D3B",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517312647535084344686",
+      "spent": "517312647535084344686",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "476336960245538226428058",
+      "spent": "1000000000000000",
+      "received": "476336960245538226428058"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "23816848012276911321402",
+      "quoted": "48336335372018",
+      "spent": "23816848012276911321402",
+      "received": "48336335372018"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "209990536601",
+      "spent": "209990536601",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "492734739507979644600",
+      "spent": "492734739507979644600",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452196543627239457460696",
+      "spent": "1000000000000000",
+      "received": "452196543627239457460696"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": false,
+      "exactOutput": false,
+      "amount": "45216146056049639646137",
+      "quoted": "87210197887498",
+      "spent": "45216146056049639646137",
+      "received": "87210197887498"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": true,
+      "exactOutput": true,
+      "amount": "100000000000000000000",
+      "quoted": "220572231198",
+      "spent": "220572231198",
+      "received": "100000000000000000000"
+    },
+    {
+      "mode": 5,
+      "project": "0xD964C609E61fA7b5c4Ed7572cB12b6e356babd31",
+      "buy": false,
+      "exactOutput": true,
+      "amount": "1000000000000",
+      "quoted": "517031439767828343190",
+      "spent": "517031439767828343190",
+      "received": "1000000000000"
+    },
+    {
+      "mode": 1,
+      "project": "0x74C1B8F478bdf5D4B0569a62C5bA64EED1F6E937",
+      "buy": true,
+      "exactOutput": false,
+      "amount": "1000000000000000",
+      "quoted": "452455278758783129306982",
+      "spent": "1000000000000000",
+      "received": "452455278758783129306982"
+    }
+  ],
+  "developerBuys": [
+    {
+      "mode": 0,
+      "nativeProject": "0x7143C690034Da2c0A12183f24fe030bC305C617A",
+      "directProject": "0x1666460F8D86E3e809Ee03Cf467Eb38A9A69b17C"
+    },
+    {
+      "mode": 1,
+      "nativeProject": "0xfe5F290245F56f01a8ef58eb810Bb6B14e5d99Ed",
+      "directProject": "0x28aAaA8F84a9494145EE7312E99661AEc022a410"
+    },
+    {
+      "mode": 2,
+      "nativeProject": "0x79b1D11956b634A9bC55492f023d3568Cd4A7c40",
+      "directProject": "0x0Dd1b638f0437cACC5EBd97eb9CF374203d7cA68"
+    },
+    {
+      "mode": 3,
+      "nativeProject": "0xcC3C3C1382C4a99d83e3Afde838747920c728D39",
+      "directProject": "0x0071b9716ed2775eE70080E61B915Ae22D43a4B0"
+    },
+    {
+      "mode": 4,
+      "nativeProject": "0x0657BFfCde2DebA2F6f8374488B1647814fe83ae",
+      "directProject": "0x1c64F6D1A84657694959E3cc429032F0e4d8c73a"
+    },
+    {
+      "mode": 5,
+      "nativeProject": "0xfeC5a6219d26BcEaF89B53d054995d03aB8Ad04d",
+      "directProject": "0x2642d80025a0170b503c055D0448D234d350d634"
+    },
+    {
+      "weightedProject": "0x1D8dA757E7F3ebaA36A21D5DaD8F8733267eDD01",
+      "quotes": [
+        "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+        "0x55d398326f99059fF775485246999027B3197955",
+        "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"
+      ]
+    }
+  ],
+  "settlementCoverage": [
+    "Fixed-recipient partial distribution; no caller reward or withdrawal rights",
+    "Permissionless dead-address burn with replay protection",
+    "Creator policy epochs, holder checkpoints and NFT transfer history",
+    "Creator/sharing/holder/NFT claims redeem credits without a separate user sweep",
+    "Protocol withdrawal remains admin-only",
+    "Failed transfers roll back claims and pending ledgers; reentry and forged callbacks rejected"
+  ]
+}
